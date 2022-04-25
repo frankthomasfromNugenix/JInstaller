@@ -13,5 +13,12 @@ public enum InstallType
     RemoveDirectory,
     RemoveFile,
     UpdateDirectory,
-    UpdateFile
+    UpdateFile,
+    Advanced
+}
+
+public enum CompressionType
+{ 
+    GZip,
+    Zip
 }

@@ -25,7 +25,7 @@ public sealed class JInstaller
         {
             installEvent = _events.Dequeue();
 
-            await EventProcessor.RunAsync(installEvent);
+            await EventProcessor.ProcessAsync(installEvent);
         }
     }
 }

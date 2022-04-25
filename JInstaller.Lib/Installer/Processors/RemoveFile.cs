@@ -11,7 +11,8 @@ namespace JInstaller.Lib.Installer
     {
         public Task Run(InstallEvent installEvent)
         {
-            throw new NotImplementedException();
+            File.Delete(installEvent.FilesDirectory);
+            return Task.CompletedTask;
         }
     }
 }

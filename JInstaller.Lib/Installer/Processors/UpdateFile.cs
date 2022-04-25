@@ -9,9 +9,9 @@ namespace JInstaller.Lib.Installer
 {
     internal class UpdateFile : IProcessor
     {
-        public Task Run(InstallEvent installEvent)
+        public async Task Run(InstallEvent installEvent)
         {
-            throw new NotImplementedException();
+            await ProcessorBasic.MoveFile(installEvent.FilesDirectory, installEvent.ExtractDirectory, true);
         }
     }
 }

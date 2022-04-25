@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace JInstaller;
 internal static class EventProcessor
 {
-    public static async Task RunAsync(InstallEvent installEvent)
+    public static async Task ProcessAsync(InstallEvent installEvent)
     {
         ProcessorFactory processorFactory = new ProcessorFactory();
 

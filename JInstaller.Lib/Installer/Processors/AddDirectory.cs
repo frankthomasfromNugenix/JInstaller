@@ -19,8 +19,21 @@ namespace JInstaller.Lib.Installer
 
             foreach (string file in files)
             {
+                Console.WriteLine("FILE:" + file);
                 await ProcessorBasic.MoveFile(file, installEvent.ExtractDirectory, false);
             }
+
+            string[] dirs = Directory.GetDirectories(installEvent.FilesDirectory);
+
+            foreach (string dir in dirs)
+            {
+                await Run(new InstallEvent()
+                {
+                    FilesDirectory = dir,
+                    ExtractDirectory = $"{installEvent.ExtractDirectory}{Path.DirectorySeparatorChar}{dir.Substring(dir.LastIndexOf('\\'))}"
+                });
+            }
         }
+
     }
 }

@@ -9,9 +9,18 @@ namespace JInstaller.Lib.Installer
 {
     internal class UpdateDirectory : IProcessor
     {
-        public Task Run(InstallEvent installEvent)
+        public async Task Run(InstallEvent installEvent)
         {
-            throw new NotImplementedException();
+            string[] files = Directory.GetFiles(installEvent.FilesDirectory);
+
+            if (!Directory.Exists(installEvent.ExtractDirectory))
+                Directory.CreateDirectory(installEvent.ExtractDirectory);
+
+
+            foreach (string file in files)
+            {
+                await ProcessorBasic.MoveFile(file, installEvent.ExtractDirectory, true);
+            }
         }
     }
 }
