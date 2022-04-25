@@ -1,5 +1,16 @@
 # JInstaller
 Welcome to JInstaller. This is simply a libary to  chain together instructions for moving files. This libary is compatable for both windows and linux.
+# Features
+- [x] Add File
+- [x] Add Directory
+- [x] Update File
+- [x] Update Directory
+- [x] Remove File
+- [x] Remove Directory
+- [ ] Compress File
+- [ ] Compress Directory
+- [ ] Decompress File
+- [ ] Decompress Directory
 # Samples
 <b>Add Directory</b>
 ```
