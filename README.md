@@ -11,6 +11,9 @@ Welcome to JInstaller. This is simply a libary to  chain together instructions f
 - [ ] Compress Directory
 - [ ] Decompress File
 - [ ] Decompress Directory
+- [ ] Azure Download
+- [ ] Azure Upload
+
 # Samples
 <b>Add Directory</b>
 ```
